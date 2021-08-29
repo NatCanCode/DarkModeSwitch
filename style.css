@@ -1,0 +1,60 @@
+:root {
+    --white: #e0e0e0;
+    --black: #111111;
+    --almond: blanchedalmond;
+    --grey: grey;
+    --switch-color: var(--grey);
+    --toggle-translate: 0;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    /* background-color: var(--black); */
+    background: var(--almond);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+  body.dark {
+    background: grey;
+    --switch-color: var(--almond);
+    --toggle-translate: 2.5rem;
+  }
+  
+  /* Toggle */
+  .checkbox {
+    display: none;
+  }
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: var(--switch-color);
+    /* background: black; */
+    border-radius: 5rem;
+    padding: 0.5rem;
+    height: 2.5rem;
+    width: 5rem;
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  .toggle .ball {
+    position: absolute;
+    background: var(--black);
+    /* background: blanchedalmond; */
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    transform: translatex(var(--toggle-translate));
+    transition: transform 0.3s ease, 0.5s ease;
+  }
+
